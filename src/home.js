@@ -1,28 +1,14 @@
+export { homeActive };
+
 function homeActive() {
 
-    const header = document.querySelector('.header');
+    
     const content = document.querySelector('#content');
-  
-    // Nav container
-  
-    const nav = document.createElement('nav');
-    nav.classList.add('top-nav');
-  
-    const homeBtn = document.createElement('button');
-    const menuBtn = document.createElement('button');
-    const contactBtn = document.createElement('button');
-    homeBtn.type = 'button';
-    menuBtn.type = 'button';
-    contactBtn.type = 'button';
-    homeBtn.textContent = 'Home';
-    menuBtn.textContent = 'Menu';
-    contactBtn.textContent = 'Contact';
-  
-    nav.appendChild(homeBtn);
-    nav.appendChild(menuBtn);
-    nav.appendChild(contactBtn);
-    console.log(header);
-    header.appendChild(nav);
+    const header = document.querySelector('.header');
+    
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    };
   
     // Content Container
   
